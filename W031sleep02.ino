@@ -2,10 +2,10 @@
 #include <ESP8266HTTPClient.h>
 #include <Simple_HCSR04.h>
 //請修改以下參數--------------------------------------------
-char ssid[] = "ALHN03";
-char password[] = "48874718";
+char ssid[] = "無線網路SSID";
+char password[] = "無線網路密碼";
 //請修改為你自己的API Key，並將https改為http
-String url = "http://api.thingspeak.com/update?api_key=8W90L44IT668HY1Z";
+String url = "http://api.thingspeak.com/update?api_key=****************";
 const int ECHO_PIN = 4; /// the pin at which the sensor echo is connected
 const int TRIG_PIN = 5; /// the pin at which the sensor trig is connected
 
@@ -65,5 +65,5 @@ do
     Serial.println("網路傳送失敗");
   }
   http.end();
-  ESP.deepSleep(150e6);//休息90秒
+  ESP.deepSleep(150e6);//休息150秒
 }
